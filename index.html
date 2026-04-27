@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -74,6 +74,7 @@
 </head>
 
 <body>
+
   <!-- ════════════════════ TOP BAR ════════════════════ -->
   <div class="topbar">
     <div class="topbar-inner">
@@ -120,23 +121,22 @@
   <!-- ════════════════════ MAIN NAV ════════════════════ -->
   <nav class="main-nav">
     <div class="nav-inner">
-      <a href="#" class="logo">
+      <a href="#" onclick="showPage('home')" class="logo">
         <img class="h-16" src="/img/gsilogo.jpeg" alt="" />
       </a>
 
       <div class="nav-links">
-        <a href="#" class="nav-link">About</a>
-        <a href="#" class="nav-link">Pre-School</a>
-        <a href="#" class="nav-link">Daycare</a>
-        <a href="#" class="nav-link">Enrol</a>
-        <a href="#" class="nav-link">Funding</a>
-        <a href="#" class="nav-link">Meals</a>
-        <a href="#" class="nav-link">Summer Club</a>
+        <a href="#" onclick="showPage('about')" id="nav-about">About</a>
+        <a href="#" onclick="showPage('preschool')" id="nav-preschool">Pre-School</a>
+        <a href="#" onclick="showPage('daycare')" id="nav-daycare">Daycare</a>
+        <a href="#" onclick="showPage('nursery')" id="nav-nursery">Nursery</a>
+        <a href="#" onclick="showPage('primary')" id="nav-primary">Primary</a>
+        <a href="#" onclick="showPage('enrol')" id="nav-enrol">Enroll</a>
       </div>
 
       <div class="nav-ctas">
         <a href="#" class="btn btn-teal">Virtual Tour</a>
-        <a href="#contact" class="btn btn-orange">Book Viewing</a>
+        <a href="#" onclick="showPage('enrol')" class="btn btn-orange">Book Viewing</a>
       </div>
 
       <button class="hamburger" id="hamburger" aria-label="Open menu">
@@ -146,345 +146,1273 @@
 
     <!-- Mobile menu -->
     <div class="mob-menu" id="mob-menu">
-      <a href="#" class="mob-link">About</a>
-      <a href="#" class="mob-link">Pre-School</a>
-      <a href="#" class="mob-link">Daycare</a>
-      <a href="#" class="mob-link">Enrol</a>
-      <a href="#" class="mob-link">Funding</a>
-      <a href="#" class="mob-link">Meals</a>
-      <a href="#" class="mob-link">Summer Club</a>
+      <a href="#" onclick="showPage('about')" id="nav-about" class="mob-link">About</a>
+      <a href="#" onclick="showPage('preschool')" id="nav-preschool" class="mob-link">Pre-School</a>
+      <a href="#" onclick="showPage('daycare')" id="nav-daycare" class="mob-link">Daycare</a>
+      <a href="#" onclick="showPage('nursery')" id="nav-nursery" class="mob-link">Nursery</a>
+      <a href="#" onclick="showPage('primary')" id="nav-primary" class="mob-link">Primary</a>
+      <a href="#" onclick="showPage('enrol')" id="nav-enrol" class="mob-link">Enroll</a>
       <div class="mob-ctas">
         <a href="#" class="btn btn-teal" style="flex: 1; text-align: center">Virtual Tour</a>
-        <a href="#contact" class="btn btn-orange" style="flex: 1; text-align: center">Book Viewing</a>
+        <a href="#" onclick="showPage('enrol')" class="btn btn-orange" style="flex: 1; text-align: center">Book Viewing</a>
       </div>
     </div>
   </nav>
 
-  <!-- ════════════════════ HERO ════════════════════ -->
-  <section class="hero">
-    <div class="hero-content rv">
-      <h1>
-        Gracias Semilla International Nursery and Primary School<br /><span>&nbsp;</span>
-      </h1>
 
-      <p>
-        Gracias Semilla International is dedicated to providing the best
-        quality learning and childcare for all children!
-      </p>
-      <a href="#contact" class="btn btn-orange btn-lg">Contact us</a>
-    </div>
-    <div class="hero-wave">
-      <svg viewBox="0 0 1440 55" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
-        style="display: block; width: 100%; height: 55px">
-        <path d="M0,22 C360,55 1080,0 1440,26 L1440,55 L0,55 Z" fill="#ffffff" />
-      </svg>
-    </div>
-  </section>
+  <!-- ══════════════════════════════════════════ -->
+  <!-- HOME PAGE -->
+  <!-- ══════════════════════════════════════════ -->
+  <div class="page active" id="page-home">
 
-  <!-- ════════════════════ 3 INFO CARDS ════════════════════ -->
-  <section class="cards-section">
-    <div class="cards-grid">
-      <div class="info-card rv">
-        <span class="card-icon">📚</span>
-        <h4>Parent Pack</h4>
+    <!-- ════════════════════ HERO ════════════════════ -->
+    <section class="hero">
+      <div class="hero-content rv">
+        <h1>
+          Gracias Semilla International Nursery and Primary School<br /><span>&nbsp;</span>
+        </h1>
+
         <p>
-          If you are thinking of bringing your child or children to us, then
-          first of all – thank you. The pack is full of helpful information
-          about our Nursery.
+          Gracias Semilla International is dedicated to providing the best
+          quality learning and childcare for all children!
         </p>
-        <a href="#contact" class="btn btn-teal">Contact Us</a>
+        <a href="#contact" class="btn btn-orange btn-lg">Contact us</a>
       </div>
-
-      <div class="info-card rv">
-        <span class="card-icon">🎠</span>
-        <h4>Viewings</h4>
-        <p>
-          We'd love for you to come and take a look around our nursery. Our
-          nursery is beautifully designed providing a stimulating environment
-          for the kids in our care.
-        </p>
-        <a href="#contact" class="btn btn-orange">Book Now</a>
+      <div class="hero-wave">
+        <svg viewBox="0 0 1440 55" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+          style="display: block; width: 100%; height: 55px">
+          <path d="M0,22 C360,55 1080,0 1440,26 L1440,55 L0,55 Z" fill="#ffffff" />
+        </svg>
       </div>
+    </section>
 
-      <div class="info-card rv">
-        <span class="card-icon">✏️</span>
-        <h4>Apply</h4>
-        <p>
-          Apply for a place for your child / children. Every child deserves
-          access to good learning environment. Secure a place for your child
-          now by completing the form.
-        </p>
-        <a href="#" class="btn btn-yellow">Read more</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ════════════════════ ABOUT ════════════════════ -->
-  <section class="about-section">
-    <div class="about-inner">
-      <div class="about-text rv">
-        <span class="eyebrow">A Warm Welcome to</span>
-        <h2>Gracias Semilla International Nursery and Primary School</h2>
-        <p>
-          We set out on a mission to create a day nursery in which children
-          between 2 months old and 5 years of age would be able to learn and
-          grow in confidence. Bright Start also offers wraparound care for
-          children up to the age of 8, so we can continue to nurture your
-          children during the first few years of their school journey.
-        </p>
-        <p>
-          Studies have shown that children do better when they are encouraged
-          to learn using play as a method of teaching… and we wanted to expand
-          and explore this concept to help each of our little cherubs reach
-          their full potential.
-        </p>
-        <a href="#" class="btn btn-teal">read more</a>
-      </div>
-
-      <div class="about-img rv">
-        <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&q=80"
-          alt="Diverse children enjoying playing with toys" />
-      </div>
-    </div>
-  </section>
-
-  <!-- ════════════════════ CURIOUS MINDS ════════════════════ -->
-  <section class="minds-section">
-    <div class="minds-inner">
-      <div class="minds-text rv">
-        <h2>A Day Nursery Celebrating Curious Minds</h2>
-        <p>
-          We teach young minds that being curious is a wonderful thing. They
-          have so many exciting life adventures to look forward to – and we
-          want to prepare them as best we can. We encourage each child in our
-          care to explore the world in the way they know best, with their
-          imaginations!
-        </p>
-        <p>
-          It is our aim that each and every child leaves us improved. Whether
-          that be in terms of speech, social awareness, problem solving – or
-          any other area where your child is struggling. We are here to
-          actively encourage learning through good fun… no matter the stage of
-          learning they are at.
-        </p>
-        <p>
-          Of course, here at Bright Start Day Nursery, we want each of our
-          children to feel included. That's why we support equal opportunities
-          for all!
-        </p>
-      </div>
-
-      <div class="features-grid">
-        <div class="feat-card rv">
-          <div class="feat-icon-wrap" style="background: #fff8e1">📖</div>
-          <h4>Social &amp; Fun</h4>
+    <!-- ════════════════════ 3 INFO CARDS ════════════════════ -->
+    <section class="cards-section">
+      <div class="cards-grid">
+        <div class="info-card rv">
+          <span class="card-icon">📚</span>
+          <h4>Parent Pack</h4>
           <p>
-            Nursery is a great place to start to learn social skills, and at
-            Bright Start we make this a fun experience for every child. Our
-            children can form these early friendship bonds in our variety of
-            play areas.
+            If you are thinking of bringing your child or children to us, then
+            first of all – thank you. The pack is full of helpful information
+            about our Nursery.
+          </p>
+          <a href="#contact" class="btn btn-teal">Contact Us</a>
+        </div>
+
+        <div class="info-card rv">
+          <span class="card-icon">🎠</span>
+          <h4>Viewings</h4>
+          <p>
+            We'd love for you to come and take a look around our nursery. Our
+            nursery is beautifully designed providing a stimulating environment
+            for the kids in our care.
+          </p>
+          <a href="#contact" class="btn btn-orange">Book Now</a>
+        </div>
+
+        <div class="info-card rv">
+          <span class="card-icon">✏️</span>
+          <h4>Apply</h4>
+          <p>
+            Apply for a place for your child / children. Every child deserves
+            access to good learning environment. Secure a place for your child
+            now by completing the form.
+          </p>
+          <a href="#" class="btn btn-yellow">Read more</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════ ABOUT ════════════════════ -->
+    <section class="about-section">
+      <div class="about-inner">
+        <div class="about-text rv">
+          <span class="eyebrow">A Warm Welcome to</span>
+          <h2>Gracias Semilla International Nursery and Primary School</h2>
+          <p>
+            We set out on a mission to create a day nursery in which children
+            between 2 months old and 5 years of age would be able to learn and
+            grow in confidence. Bright Start also offers wraparound care for
+            children up to the age of 8, so we can continue to nurture your
+            children during the first few years of their school journey.
+          </p>
+          <p>
+            Studies have shown that children do better when they are encouraged
+            to learn using play as a method of teaching… and we wanted to expand
+            and explore this concept to help each of our little cherubs reach
+            their full potential.
+          </p>
+          <a href="#" class="btn btn-teal">read more</a>
+        </div>
+
+        <div class="about-img rv">
+          <img src="img/classroom2.jpg"
+            alt="Diverse children enjoying playing with toys" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════ CURIOUS MINDS ════════════════════ -->
+    <section class="minds-section">
+      <div class="minds-inner">
+        <div class="minds-text rv">
+          <h2>A Day Nursery Celebrating Curious Minds</h2>
+          <p>
+            We teach young minds that being curious is a wonderful thing. They
+            have so many exciting life adventures to look forward to – and we
+            want to prepare them as best we can. We encourage each child in our
+            care to explore the world in the way they know best, with their
+            imaginations!
+          </p>
+          <p>
+            It is our aim that each and every child leaves us improved. Whether
+            that be in terms of speech, social awareness, problem solving – or
+            any other area where your child is struggling. We are here to
+            actively encourage learning through good fun… no matter the stage of
+            learning they are at.
+          </p>
+          <p>
+            Of course, here at Bright Start Day Nursery, we want each of our
+            children to feel included. That's why we support equal opportunities
+            for all!
           </p>
         </div>
 
-        <div class="feat-card rv">
-          <div class="feat-icon-wrap" style="background: #e8f8f5">🏠</div>
-          <h4>Safe Enviroment</h4>
-          <p>
-            We have very high security standards and all staff are fully
-            vetted and checked to ensure the safety of the children. Safety
-            and security begins at the front door and continues throughout our
-            nursery.
-          </p>
-        </div>
-
-        <div class="feat-card rv">
-          <div class="feat-icon-wrap" style="background: #fef3e2">👩‍🏫</div>
-          <h4>Caring Staff</h4>
-          <p>
-            At Bright Start our staff are passionate about their work and
-            dedicated to the children in their care. We have chosen over
-            qualified staff to ensure the very best care for the children and
-            their development.
-          </p>
-        </div>
-
-        <div class="feat-card rv">
-          <div class="feat-icon-wrap" style="background: #f3e5f5">🧩</div>
-          <h4>Learning Through Play</h4>
-          <p>
-            Through play, children develop problem-solving skills, imagination
-            and creativity, language and observation skills, and memory and
-            concentration. This is at the core of our ethos at Bright Start.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ════════════════════ VIRTUAL TOUR ════════════════════ -->
-  <section class="tour-banner">
-    <div class="rv" style="max-width: 620px; margin: auto">
-      <h2>Take a Virtual Tour!</h2>
-      <p>
-        Explore our beautifully designed nursery from wherever you are — see
-        the play areas, classrooms, and outdoor spaces.
-      </p>
-      <a href="#" class="btn btn-yellow btn-lg">Start Your Tour →</a>
-    </div>
-  </section>
-
-  <!-- ════════════════════ TESTIMONIALS ════════════════════ -->
-  <section class="testi-section">
-    <div class="testi-inner">
-      <div class="testi-header rv">
-        <span class="eyebrow">Testimonials</span>
-        <h2>What Parents Say:</h2>
-      </div>
-      <div class="testi-grid">
-        <div class="testi-card rv">
-          <div class="big-q">"</div>
-          <p>
-            Coming soon… Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar
-            dapibus leo.
-          </p>
-          <div class="testi-author">
-            <img src="https://images.unsplash.com/photo-1511895426328-dc8714191011?w=120&q=80"
-              alt="Happy family lying together" style="border: 2px solid var(--teal)" />
-            <strong>Doe Family</strong>
+        <div class="features-grid">
+          <div class="feat-card rv">
+            <div class="feat-icon-wrap" style="background: #fff8e1">📖</div>
+            <h4>Social &amp; Fun</h4>
+            <p>
+              Nursery is a great place to start to learn social skills, and at
+              Bright Start we make this a fun experience for every child. Our
+              children can form these early friendship bonds in our variety of
+              play areas.
+            </p>
           </div>
-        </div>
 
-        <div class="testi-card rv">
-          <div class="big-q">"</div>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-            tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
-          </p>
-          <div class="testi-author">
-            <img src="https://images.unsplash.com/photo-1484863137850-59afcfe05386?w=120&q=80"
-              alt="Family Relax Happiness Holiday Cheerful Concept" style="border: 2px solid var(--orange)" />
-            <strong>Jameson Family</strong>
+          <div class="feat-card rv">
+            <div class="feat-icon-wrap" style="background: #e8f8f5">🏠</div>
+            <h4>Safe Enviroment</h4>
+            <p>
+              We have very high security standards and all staff are fully
+              vetted and checked to ensure the safety of the children. Safety
+              and security begins at the front door and continues throughout our
+              nursery.
+            </p>
+          </div>
+
+          <div class="feat-card rv">
+            <div class="feat-icon-wrap" style="background: #fef3e2">👩‍🏫</div>
+            <h4>Caring Staff</h4>
+            <p>
+              At Bright Start our staff are passionate about their work and
+              dedicated to the children in their care. We have chosen over
+              qualified staff to ensure the very best care for the children and
+              their development.
+            </p>
+          </div>
+
+          <div class="feat-card rv">
+            <div class="feat-icon-wrap" style="background: #f3e5f5">🧩</div>
+            <h4>Learning Through Play</h4>
+            <p>
+              Through play, children develop problem-solving skills, imagination
+              and creativity, language and observation skills, and memory and
+              concentration. This is at the core of our ethos at Bright Start.
+            </p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ════════════════════ GALLERY ════════════════════ -->
-  <section class="gallery-section">
-    <div class="gallery-inner">
-      <div class="gallery-header rv">
-        <span class="eyebrow">Our Amazing Facilities</span>
-        <h2>Our Image Gallery</h2>
+    <!-- ════════════════════ VIRTUAL TOUR ════════════════════ -->
+    <section class="tour-banner">
+      <div class="rv" style="max-width: 620px; margin: auto">
+        <h2>Take a Virtual Tour!</h2>
+        <p>
+          Explore our beautifully designed nursery from wherever you are — see
+          the play areas, classrooms, and outdoor spaces.
+        </p>
+        <a href="#" class="btn btn-yellow btn-lg">Start Your Tour →</a>
       </div>
-      <div class="gallery-tabs rv">
-        <button class="tab-btn active">All</button>
-        <button class="tab-btn">Our Activities</button>
+    </section>
+
+    <!-- ════════════════════ TESTIMONIALS ════════════════════ -->
+    <section class="testi-section">
+      <div class="testi-inner">
+        <div class="testi-header rv">
+          <span class="eyebrow">Testimonials</span>
+          <h2>What Parents Say:</h2>
+        </div>
+        <div class="testi-grid">
+          <div class="testi-card rv">
+            <div class="big-q">"</div>
+            <p>
+              Enrolling my daughter at Gracias Semilla was the best decision we made for her education. Beyond the impressive academic curriculum, the school has intentionally nurtured her leadership skills and self-confidence. She is not just learning; she is thriving in an environment that truly sees her potential.
+            </p>
+            <div class="testi-author">
+              <img src="https://images.unsplash.com/photo-1511895426328-dc8714191011?w=120&q=80"
+                alt="Happy family lying together" style="border: 2px solid var(--teal)" />
+              <strong>Mrs. Adesola O., Parent</strong>
+            </div>
+          </div>
+
+          <div class="testi-card rv">
+            <div class="big-q">"</div>
+            <p>
+              The dedication of the staff at Gracias Semilla is unparalleled. They create a 'home away from home' atmosphere where children feel safe to explore their talents. My son’s progress in both his creative arts and core subjects has been remarkable. It is a school that truly plants seeds of greatness.
+            </p>
+            <div class="testi-author">
+              <img src="https://images.unsplash.com/photo-1511895426328-dc8714191011?w=120&q=80"
+                alt="Family Relax Happiness Holiday Cheerful Concept" style="border: 2px solid var(--orange)" />
+              <strong>Mr. Chidi E., Parent</strong>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="gallery-grid">
-        <div class="gal-item rv">
-          <img
-            src="https://brightstartdaynursery.co.uk/wp-content/uploads/2021/10/group-of-diverse-students-at-daycare.jpg"
-            alt="Group of diverse students at daycare" onerror="
+    </section>
+
+    <!-- ════════════════════ GALLERY ════════════════════ -->
+    <section class="gallery-section">
+      <div class="gallery-inner">
+        <div class="gallery-header rv">
+          <span class="eyebrow">Our Amazing Facilities</span>
+          <h2>Our Image Gallery</h2>
+        </div>
+        <div class="gallery-tabs rv">
+          <button class="tab-btn active">All</button>
+          <button class="tab-btn">Our Facilities</button>
+        </div>
+        <div class="gallery-grid">
+          <div class="gal-item rv">
+            <img
+              src="img/classroom1.jpg"
+              alt="Group of diverse students at daycare" onerror="
                 this.src =
                   'https://images.unsplash.com/photo-1560969184-10fe8719e047?w=600&q=80'
               " />
-          <div class="gal-label">Happy Kids</div>
-        </div>
+            <div class="gal-label">Classroom</div>
+          </div>
 
-        <div class="gal-item rv">
-          <img src="https://brightstartdaynursery.co.uk/wp-content/uploads/2021/10/brick.jpg" alt="brick" onerror="
+          <div class="gal-item rv">
+            <img src="img/compound1.jpg" alt="brick" onerror="
                 this.src =
                   'https://images.unsplash.com/photo-1567857815493-ca04428a5d01?w=600&q=80'
               " />
-          <div class="gal-label">Happy Kids</div>
-        </div>
+            <div class="gal-label">Entrance</div>
+          </div>
 
-        <div class="gal-item rv">
-          <img src="https://brightstartdaynursery.co.uk/wp-content/uploads/2021/10/girls-in-nursery.jpg" alt="" onerror="
+          <div class="gal-item rv">
+            <img src="img/playground2.jpg" alt=""
+              onerror="
                 this.src =
                   'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&q=80'
               " />
-          <div class="gal-label">Happy Kids</div>
-        </div>
+            <div class="gal-label">Playground</div>
+          </div>
 
-        <div class="gal-item rv">
-          <img
-            src="https://brightstartdaynursery.co.uk/wp-content/uploads/2021/10/young-children-enjoying-in-the-playroom.jpg"
-            alt="Young children enjoying in the playroom" onerror="
+          <div class="gal-item rv">
+            <img
+              src="img/library.jpg"
+              alt="Library" onerror="
                 this.src =
                   'https://images.unsplash.com/photo-1544776193-352d25ca82cd?w=600&q=80'
               " />
-          <div class="gal-label">Happy Kids</div>
-        </div>
+            <div class="gal-label">Library</div>
+          </div>
 
-        <div class="gal-item rv">
-          <img
-            src="https://brightstartdaynursery.co.uk/wp-content/uploads/2021/10/group-of-diverse-kindergarten-students-standing-together-in-clas.jpg"
-            alt="Group of diverse kindergarten students standing together in clas" onerror="
+          <div class="gal-item rv">
+            <img
+              src="img/classroom4.jpg"
+              alt="Group of diverse kindergarten students standing together in clas" onerror="
                 this.src =
                   'https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=600&q=80'
               " />
-          <div class="gal-label">Happy Kids</div>
-        </div>
+            <div class="gal-label">Classroom</div>
+          </div>
 
-        <!-- Peek Inside -->
-        <div class="gal-item rv">
-          <img
-            src="https://brightstartdaynursery.co.uk/wp-content/uploads/2021/10/group-of-diverse-students-at-daycare.jpg"
-            alt="Group of diverse students at daycare" onerror="
+          <!-- Peek Inside -->
+          <div class="gal-item rv">
+            <img
+              src="img/playground1.jpg"
+              alt="Group of diverse students at daycare" onerror="
                 this.src =
                   'https://images.unsplash.com/photo-1566454544259-f4b94c3d758c?w=600&q=80'
               " />
-          <div class="gal-overlay">
-            <h4>Peek Inside</h4>
-            <p>Please contact us to arrange a&nbsp; tour…</p>
-            <a href="#contact" class="btn btn-yellow" style="font-size: 0.8rem; padding: 0.4rem 1rem">Contact Us</a>
+            <div class="gal-overlay">
+              <h4>Peek Inside</h4>
+              <p>Please contact us to arrange a&nbsp; tour…</p>
+              <a href="#contact" class="btn btn-yellow" style="font-size: 0.8rem; padding: 0.4rem 1rem">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════ TIMETABLE ════════════════════ -->
+    <section class="time-section">
+      <div class="time-inner">
+        <div class="time-text rv">
+          <h2>Our Nursery Timetable</h2>
+          <p>
+            There are a number of mandatory guidelines we need to follow to
+            ensure we are meeting national requirements. The standards we work
+            with are the Early Years Foundation Stage standards set back in
+            2012. This framework is a great starting point, but we do add to the
+            schedule.
+          </p>
+          <p>
+            At any point, parents of our children may request a curriculum. We
+            will keep you informed of the day-to-day lessons as we work
+          </p>
+          <div class="hours-box">
+            <div class="box-title">Opening Hours</div>
+            <div class="h-row">
+              <span>Monday to Friday: 7.00am-7.00pm except on Easter and Christmas
+                holidays</span>
+            </div>
+            <div class="h-row">
+              <span>Breakfast club:</span><strong>7.00am-8:30am</strong>
+            </div>
+            <div class="h-row">
+              <span>After School club:</span><strong>3:30pm-7:00pm</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="time-img rv">
+          <img src="img/classroom2.jpg"
+            alt="Children at nursery" />
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- ABOUT PAGE -->
+  <!-- ══════════════════════════════════════════ -->
+  <div class="page" id="page-about">
+    <div class="hero-banner" style="background: linear-gradient(135deg,#1a2e1f,#2d6a4f)">
+      <div class="hero-content">
+        <span class="hero-eyebrow">Our Story</span>
+        <h1>About Gracias Semilla International</h1>
+        <p>Founded with a clear purpose — to create a safe, nurturing, and inspiring space where every child can
+          flourish from their very first days.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="two-col">
+        <img src="img/reception1.jpg" alt="Children learning">
+        <div class="two-col-text">
+          <div class="label">Our Mission</div>
+          <h2 class="section-title">Nurturing Curious, Confident Children</h2>
+          <p style="color:var(--mid);line-height:1.8;margin-bottom:18px;">We set out on a mission to create a day
+            nursery in which children between 2 months old and 5 years of age would be able to learn and grow in
+            confidence. We also offer wraparound care for children up to the age of 8, continuing to nurture children
+            during the first few years of their school journey.</p>
+          <p style="color:var(--mid);line-height:1.8;">Studies have shown that children do better when encouraged to
+            learn through play — and at Gracias Semilla, we've built our entire ethos around this principle. Every room,
+            every resource, and every member of staff is chosen with one goal in mind: helping each child reach their
+            full potential.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section section-alt">
+      <div class="label">Core Values</div>
+      <h2 class="section-title">What We Stand For</h2>
+      <p class="section-sub">Our four pillars guide everything we do — from the way we design our classrooms to the way
+        we welcome each family.</p>
+      <div class="cards cards-2">
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-seedling"></i></div>
+          <h3>Play-Based Learning</h3>
+          <p>Through play, children develop problem-solving skills, imagination, creativity, language, observation,
+            memory, and concentration. This is at the heart of our teaching philosophy.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3>Safety First</h3>
+          <p>We have very high security standards. All staff are fully vetted and DBS-checked. Safety and security
+            begins at the front door and continues throughout every area of our nursery.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-handshake"></i></div>
+          <h3>Inclusive Community</h3>
+          <p>We believe every child deserves equal opportunities. We celebrate diversity, support different learning
+            styles, and ensure every child feels valued, seen, and included every single day.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+          <h3>Passionate Staff</h3>
+          <p>Our team is handpicked for their passion, qualifications, and warmth. We employ over-qualified staff to
+            ensure the very best care and development for every child in our setting.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section section-dark">
+      <div class="label">By the Numbers</div>
+      <h2 class="section-title">Gracias Semilla at a Glance</h2>
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-num" style="color:var(--gold)">2mo+</div>
+          <div class="stat-label" style="color:rgba(255,255,255,.6)">Youngest Age Accepted</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num" style="color:var(--gold)">11yrs</div>
+          <div class="stat-label" style="color:rgba(255,255,255,.6)">Wraparound Care Up To</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num" style="color:var(--gold)">12hr</div>
+          <div class="stat-label" style="color:rgba(255,255,255,.6)">Daily Operating Hours</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num" style="color:var(--gold)">100%</div>
+          <div class="stat-label" style="color:rgba(255,255,255,.6)">Vetted & Qualified Staff</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="two-col reverse">
+        <img src="img/reception2.jpg" alt="Nursery team">
+        <div class="two-col-text">
+          <div class="label">Our Location</div>
+          <h2 class="section-title">Find Us in Lekki Phase 1</h2>
+          <p style="color:var(--mid);line-height:1.8;margin-bottom:24px;">We are conveniently located at <strong>No 1
+              Fola Daniel Close, Off Hakeem Dickson, Beside Central Mosque, Lekki Phase 1, Lagos</strong> — in a
+            beautifully designed building purpose-built for early years learning.</p>
+          <div style="background:var(--green-pale);border-radius:12px;padding:20px 24px;margin-bottom:24px;">
+            <p style="font-weight:600;color:var(--dark);margin-bottom:8px;"><i class="fa-solid fa-phone"
+                style="color:var(--green);margin-right:8px;"></i>+234 703 027 4068</p>
+            <p style="font-weight:600;color:var(--dark);"><i class="fa-solid fa-envelope"
+                style="color:var(--green);margin-right:8px;"></i>info@graciassemillaschools.com.ng</p>
+          </div>
+          <p style="color:var(--mid);font-size:.9rem;"><strong>Office Hours:</strong> Mon–Fri 08:00–16:00</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-strip">
+      <h2 style="color: black;">Ready to take a look around?</h2>
+      <a href="#" onclick="showPage('enrol')" style="background-color: yellow;">Book a Free Viewing <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- PRE-SCHOOL PAGE -->
+  <!-- ══════════════════════════════════════════ -->
+  <div class="page" id="page-preschool">
+    <div class="hero-banner" style="background:linear-gradient(135deg,#1b4332,#40916c)">
+      <div class="hero-content">
+        <span class="hero-eyebrow">Ages 2 – 5 Years</span>
+        <h1>Pre-School Programme</h1>
+        <p>A rich, play-based learning experience grounded in the Early Years Foundation Stage (EYFS) framework —
+          sparking curiosity from day one.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="label">The Curriculum</div>
+      <h2 class="section-title">How We Teach & What We Explore</h2>
+      <p class="section-sub">Our curriculum is structured around the seven areas of learning outlined in the EYFS,
+        brought to life through imaginative play, outdoor exploration, and creative expression.</p>
+      <div class="cards cards-3">
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-comments"></i></div>
+          <h3>Communication & Language</h3>
+          <p>We build vocabulary through storytelling, songs, group discussions, and one-to-one interactions, setting
+            the foundations for literacy.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-person-running"></i></div>
+          <h3>Physical Development</h3>
+          <p>Daily outdoor play, structured movement activities, and fine motor exercises develop coordination,
+            strength, and healthy habits.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-heart"></i></div>
+          <h3>Personal, Social & Emotional</h3>
+          <p>Children learn to manage feelings, build friendships, and develop self-confidence through circle time and
+            cooperative play.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-calculator"></i></div>
+          <h3>Mathematics</h3>
+          <p>Numbers, patterns, shapes, and problem-solving are introduced through games, puzzles, and hands-on
+            activities children love.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-book-open"></i></div>
+          <h3>Literacy</h3>
+          <p>Phonics, pre-reading, mark-making, and a love of books are nurtured through our dedicated library and daily
+            story sessions.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-earth-africa"></i></div>
+          <h3>Understanding the World</h3>
+          <p>Science, nature, culture, and technology are explored through experiments, visits, and hands-on discovery
+            activities.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section section-alt">
+      <div class="two-col">
+        <img src="img/hall.jpg" alt="Pre-school children">
+        <div class="two-col-text">
+          <div class="label">A Typical Day</div>
+          <h2 class="section-title">Your Child's Daily Journey</h2>
+          <div class="timeline" style="margin-top:24px;">
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <h4>7:00 – 8:30am · Breakfast Club</h4>
+              <p>A warm welcome with a nutritious breakfast and free play to ease into the day.</p>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <h4>8:30 – 9:00am · Morning Circle</h4>
+              <p>Songs, register, weather, and the plan for the day — building routine and language.</p>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <h4>9:00 – 11:00am · Learning Activities</h4>
+              <p>Structured play, literacy, and maths activities aligned with each child's development stage.</p>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <h4>11:00am – 12:00pm · Outdoor Play</h4>
+              <p>Fresh air, gross motor activities, and child-led exploration in our outdoor space.</p>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <h4>12:00 – 1:00pm · Lunch</h4>
+              <p>A freshly prepared, balanced meal from our in-house chef. Allergy-aware menus always.</p>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <h4>1:00 – 3:00pm · Creative & Rest</h4>
+              <p>Art, craft, music, or rest for younger children — creative exploration at its best.</p>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <h4>3:00 – 7:00pm · After School Club</h4>
+              <p>Relaxed wraparound care for school-age children with snacks, homework support, and free play.</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- ════════════════════ TIMETABLE ════════════════════ -->
-  <section class="time-section">
-    <div class="time-inner">
-      <div class="time-text rv">
-        <h2>Our Nursery Timetable</h2>
-        <p>
-          There are a number of mandatory guidelines we need to follow to
-          ensure we are meeting national requirements. The standards we work
-          with are the Early Years Foundation Stage standards set back in
-          2012. This framework is a great starting point, but we do add to the
-          schedule.
-        </p>
-        <p>
-          At any point, parents of our children may request a curriculum. We
-          will keep you informed of the day-to-day lessons as we work
-        </p>
-        <div class="hours-box">
-          <div class="box-title">Opening Hours</div>
-          <div class="h-row">
-            <span>Monday to Friday: 7.00am-7.00pm except on Easter and Christmas
-              holidays</span>
-          </div>
-          <div class="h-row">
-            <span>Breakfast club:</span><strong>7.00am-8:30am</strong>
-          </div>
-          <div class="h-row">
-            <span>After School club:</span><strong>3:30pm-7:00pm</strong>
+    <div class="section">
+      <div class="label">Frequently Asked Questions</div>
+      <h2 class="section-title">Pre-School FAQs</h2>
+      <p class="section-sub">Everything parents want to know before joining our pre-school programme.</p>
+      <div class="accordion" style="max-width:700px;">
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAcc(this)">What age can my child start pre-school? <span
+              class="acc-icon">+</span></button>
+          <div class="accordion-body">Children can join our pre-school from as young as 2 years old. We also accept
+            babies from 2 months old in our nursery setting. We'll assess each child's readiness individually during a
+            settling-in visit.</div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAcc(this)">What is the EYFS framework? <span
+              class="acc-icon">+</span></button>
+          <div class="accordion-body">The Early Years Foundation Stage (EYFS) is the statutory framework in Nigeria and
+            the UK that sets the standards for learning, development, and care for children from birth to age 5. It
+            covers seven areas of learning and ensures every child gets a strong educational foundation.</div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAcc(this)">How do you track my child's progress? <span
+              class="acc-icon">+</span></button>
+          <div class="accordion-body">Each child has a personal Learning Journal maintained by their key worker. We
+            conduct regular observations, milestone checks, and share progress reports with parents. Parents are always
+            welcome to request a meeting to discuss their child's development.</div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAcc(this)">Do you cater for children with special educational
+            needs? <span class="acc-icon">+</span></button>
+          <div class="accordion-body">Absolutely. We are committed to inclusion and equal opportunities. Our SENCO
+            (Special Educational Needs Coordinator) works with families to create individual support plans so that every
+            child can thrive in our setting.</div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAcc(this)">What is your staff-to-child ratio? <span
+              class="acc-icon">+</span></button>
+          <div class="accordion-body">We maintain ratios that meet or exceed national guidelines: 1:3 for children under
+            2, 1:4 for ages 2–3, and 1:8 for children aged 3–5. Every child is assigned a key worker who is their
+            primary point of contact.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-strip">
+      <h2>Secure your child's place in our Pre-School today.</h2>
+      <a href="#" onclick="showPage('enrol')">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- DAYCARE PAGE -->
+  <!-- ══════════════════════════════════════════ -->
+  <div class="page" id="page-daycare">
+    <div class="hero-banner" style="background:linear-gradient(135deg,#212d1e,#52796f)">
+      <div class="hero-content">
+        <span class="hero-eyebrow">Ages 2 Months – 8 Years</span>
+        <h1>Flexible Daycare & Wraparound Care</h1>
+        <p>Whether you need full-time childcare or just a few sessions a week, our daycare is designed to fit your
+          family's life.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="label">Our Daycare Sessions</div>
+      <h2 class="section-title">Flexible Sessions to Suit Every Family</h2>
+      <p class="section-sub">We offer a range of session types so you can find the right balance for your child and your
+        schedule.</p>
+      <table class="info-table">
+        <thead>
+          <tr>
+            <th>Session</th>
+            <th>Time</th>
+            <th>Suitable For</th>
+            <th>Includes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Breakfast Club</td>
+            <td>7:00 – 8:30am</td>
+            <td>All ages</td>
+            <td><span class="badge badge-gold">Breakfast included</span></td>
+          </tr>
+          <tr>
+            <td>Morning Session</td>
+            <td>8:30am – 12:30pm</td>
+            <td>2 months – 5 years</td>
+            <td><span class="badge badge-green">Snack included</span></td>
+          </tr>
+          <tr>
+            <td>Full Day</td>
+            <td>8:30am – 5:30pm</td>
+            <td>2 months – 5 years</td>
+            <td><span class="badge badge-gold">All meals included</span></td>
+          </tr>
+          <tr>
+            <td>Afternoon Session</td>
+            <td>12:30 – 5:30pm</td>
+            <td>2 months – 5 years</td>
+            <td><span class="badge badge-green">Lunch & snack</span></td>
+          </tr>
+          <tr>
+            <td>After School Club</td>
+            <td>3:30 – 7:00pm</td>
+            <td>Up to age 8</td>
+            <td><span class="badge badge-green">Snack included</span></td>
+          </tr>
+          <tr>
+            <td>Extended Day</td>
+            <td>7:00am – 7:00pm</td>
+            <td>All ages</td>
+            <td><span class="badge badge-gold">All meals included</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section section-alt">
+      <div class="two-col">
+        <img src="img/toys.jpg" alt="Children in daycare">
+        <div class="two-col-text">
+          <div class="label">Baby & Toddler Care</div>
+          <h2 class="section-title">A Loving Home Away From Home</h2>
+          <p style="color:var(--mid);line-height:1.8;margin-bottom:18px;">Our baby room is a warm, calm environment for
+            our youngest children (2 months to 24 months). With low lighting, soft furnishings, and sensory play zones,
+            it's designed around the developmental needs of infants.</p>
+          <p style="color:var(--mid);line-height:1.8;margin-bottom:18px;">Our toddler rooms are vibrant, stimulating
+            spaces where children aged 1–3 can explore freely. Every child has a named key worker who maintains
+            consistent routines, provides responsive care, and keeps parents updated throughout the day.</p>
+          <div class="cards cards-2" style="margin-top:8px;">
+            <div class="card" style="padding:22px;">
+              <div class="card-icon"><i class="fa-solid fa-baby"></i></div>
+              <h3 style="font-size:1rem;">Baby Room</h3>
+              <p>2 months – 24 months. Calm, nurturing, ratio 1:3.</p>
+            </div>
+            <div class="card" style="padding:22px;">
+              <div class="card-icon"><i class="fa-solid fa-child"></i></div>
+              <h3 style="font-size:1rem;">Toddler Room</h3>
+              <p>Ages 1 – 3. Active, exploratory play, ratio 1:4.</p>
+            </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="time-img rv">
-        <img src="https://images.unsplash.com/photo-1476703993599-0035a21b17a9?w=800&q=80" alt="Children at nursery" />
+    <div class="section">
+      <div class="label">After School</div>
+      <h2 class="section-title">After School Club — Ages 5 to 8</h2>
+      <p class="section-sub">Our After School Club provides a safe, stimulating environment for school-age children from
+        3:30pm to 7:00pm every weekday.</p>
+      <div class="cards cards-3">
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-book"></i></div>
+          <h3>Homework Support</h3>
+          <p>Qualified staff available to help children complete homework and reading tasks in a calm, focused
+            environment.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-gamepad"></i></div>
+          <h3>Games & Free Play</h3>
+          <p>Board games, outdoor play, sports, and creative activities let children unwind and socialise after school.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-apple-whole"></i></div>
+          <h3>Healthy Snacks</h3>
+          <p>A nutritious afternoon snack is provided each day — prepared fresh by our professional nursery chef.</p>
+        </div>
       </div>
     </div>
-  </section>
 
-  <!-- ════════════════════ CONTACT ════════════════════ -->
+    <div class="section section-dark">
+      <div class="label">Safety & Security</div>
+      <h2 class="section-title">Your Child's Safety is Our Priority</h2>
+      <p class="section-sub">We operate a rigorous safeguarding framework that every member of staff is trained in.</p>
+      <div class="cards cards-3">
+        <div class="card card-dark">
+          <div class="card-icon"><i class="fa-solid fa-lock"></i></div>
+          <h3>Secure Entry System</h3>
+          <p>Keypad-controlled entry, CCTV coverage, and a strict sign-in/sign-out policy for every child every day.</p>
+        </div>
+        <div class="card card-dark">
+          <div class="card-icon"><i class="fa-solid fa-user-check"></i></div>
+          <h3>Fully Vetted Staff</h3>
+          <p>All staff undergo enhanced background checks, safeguarding training, and first aid certification before
+            joining our team.</p>
+        </div>
+        <div class="card card-dark">
+          <div class="card-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+          <h3>Parent Communication</h3>
+          <p>Daily updates, incident reports, and developmental notes shared with parents via our nursery app and
+            in-person handovers.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-strip">
+      <h2>Book a viewing to see our daycare in action.</h2>
+      <a href="#" onclick="showPage('enrol')">Book a Viewing <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- ENROL PAGE -->
+  <!-- ══════════════════════════════════════════ -->
+  <div class="page" id="page-enrol">
+    <div class="hero-banner" style="background:linear-gradient(135deg,#1a2e1f,#2d6a4f)">
+      <div class="hero-content">
+        <span class="hero-eyebrow">Secure a Place</span>
+        <h1>Enroll Your Child at Gracias Semilla</h1>
+        <p>Every child deserves a great start. Complete the form below and our admissions team will be in touch within
+          48 hours.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div style="display:grid;grid-template-columns:1fr 380px;gap:60px;align-items:start;" class="enrol-grid">
+        <div>
+          <div class="label">Application Form</div>
+          <h2 class="section-title" style="margin-bottom:32px;">Tell Us About Your Child</h2>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Parent / Guardian First Name *</label>
+              <input type="text" placeholder="e.g. Amara">
+            </div>
+            <div class="form-group">
+              <label>Parent / Guardian Last Name *</label>
+              <input type="text" placeholder="e.g. Okonkwo">
+            </div>
+            <div class="form-group">
+              <label>Email Address *</label>
+              <input type="email" placeholder="amara@example.com">
+            </div>
+            <div class="form-group">
+              <label>Phone Number *</label>
+              <input type="tel" placeholder="+234 ...">
+            </div>
+            <div class="form-group">
+              <label>Child's First Name *</label>
+              <input type="text" placeholder="Child's first name">
+            </div>
+            <div class="form-group">
+              <label>Child's Date of Birth *</label>
+              <input type="date">
+            </div>
+            <div class="form-group">
+              <label>Programme of Interest *</label>
+              <select>
+                <option value="">Select programme...</option>
+                <option>Baby Room (2–24 months)</option>
+                <option>Toddler Room (1–3 years)</option>
+                <option>Pre-School (3–5 years)</option>
+                <option>After School Club (5–8 years)</option>
+                <option>Full Day Daycare</option>
+                <option>Summer Club</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Preferred Start Date</label>
+              <input type="date">
+            </div>
+            <div class="form-group">
+              <label>Sessions Required</label>
+              <select>
+                <option>Full Week (5 days)</option>
+                <option>3 Days Per Week</option>
+                <option>2 Days Per Week</option>
+                <option>Part-Time — Mornings Only</option>
+                <option>Part-Time — Afternoons Only</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>How Did You Hear About Us?</label>
+              <select>
+                <option>Google / Online Search</option>
+                <option>Word of Mouth</option>
+                <option>Social Media</option>
+                <option>Walked Past / Sign</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group full">
+              <label>Any Special Requirements or Additional Information</label>
+              <textarea
+                placeholder="Allergies, medical conditions, SEND needs, or anything else we should know..."></textarea>
+            </div>
+            <div class="form-group full">
+              <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-weight:400;">
+                <input type="checkbox" style="width:18px;height:18px;margin-top:2px;flex-shrink:0;">
+                <span>I agree to Gracias Semilla's privacy policy and consent to being contacted regarding this
+                  enquiry.</span>
+              </label>
+            </div>
+          </div>
+          <button class="submit-btn"
+            onclick="alert('Thank you! Our admissions team will be in touch within 48 hours.')"
+            style="background: yellow; color: black">Submit Application <i
+              class="fa-solid fa-paper-plane" style="margin-left:6px;"></i></button>
+        </div>
+        <div style="position:sticky;top:90px;">
+          <div style="background:var(--green-pale);border-radius:var(--radius);padding:32px;">
+            <div class="label">What Happens Next?</div>
+            <div class="timeline" style="margin-top:20px;">
+              <div class="tl-item">
+                <div class="tl-dot"></div>
+                <h4>1. Application Received</h4>
+                <p>We'll confirm receipt of your application within 24 hours.</p>
+              </div>
+              <div class="tl-item">
+                <div class="tl-dot"></div>
+                <h4>2. Admissions Call</h4>
+                <p>A member of our team will call to discuss your child's needs and available spaces.</p>
+              </div>
+              <div class="tl-item">
+                <div class="tl-dot"></div>
+                <h4>3. Nursery Visit</h4>
+                <p>We'll invite you in for a free guided tour of our facilities — no obligation.</p>
+              </div>
+              <div class="tl-item">
+                <div class="tl-dot"></div>
+                <h4>4. Settling-In Sessions</h4>
+                <p>Before starting, we arrange free settling-in visits to help your child feel at home.</p>
+              </div>
+              <div class="tl-item">
+                <div class="tl-dot"></div>
+                <h4>5. First Day! <i class="fa-solid fa-star" style="color:var(--gold);"></i></h4>
+                <p>Your child begins their Gracias Semilla journey — we can't wait to meet them!</p>
+              </div>
+            </div>
+          </div>
+          <div style="background:var(--dark);border-radius:var(--radius);padding:28px;margin-top:20px;">
+            <p style="color:var(--gold);font-weight:600;margin-bottom:10px;"><i class="fa-solid fa-phone"
+                style="margin-right:8px;"></i>Prefer to call?</p>
+            <p style="color:rgba(255,255,255,.7);font-size:.9rem;line-height:1.7;">Call us directly on <strong
+                style="color:#fff;">+234 703 027 4068</strong> during office hours (Mon–Fri, 8am–4pm) and we'll be happy
+              to help.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- NURSERY PAGE -->
+  <!-- ══════════════════════════════════════════ -->
+  <div class="page" id="page-nursery">
+    <div class="hero-banner" style="background:linear-gradient(135deg,#1a2e1f,#2d6a4f)">
+      <div class="hero-content">
+        <span class="hero-eyebrow">Ages 2 Months – 3 Years</span>
+        <h1>Our Nursery — Gentle Beginnings</h1>
+        <p>A warm, stimulating, and safe home-from-home for your youngest children. Every moment in our nursery is
+          designed to nurture growth, curiosity, and joy.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="two-col">
+        <img src="img/classroom1.jpg" alt="Nursery babies">
+        <div class="two-col-text">
+          <div class="label">Who We Welcome</div>
+          <h2 class="section-title">From Your Baby's First Days</h2>
+          <p style="color:var(--mid);line-height:1.8;margin-bottom:18px;">Our nursery welcomes children from just 2
+            months old. We understand how significant it is to entrust your baby to someone else's care — which is why
+            everything about our nursery is built around comfort, safety, and love.</p>
+          <p style="color:var(--mid);line-height:1.8;margin-bottom:24px;">Every child is assigned a dedicated key worker
+            who gets to know their personality, preferences, and developmental milestones. We follow each child's
+            individual rhythms, never imposing a rigid timetable on our youngest learners.</p>
+          <div class="cards cards-2" style="margin-top:8px;">
+            <div class="card" style="padding:22px;">
+              <div class="card-icon"><i class="fa-solid fa-baby"></i></div>
+              <h3 style="font-size:1rem;">Baby Room</h3>
+              <p>2 – 12 months. Calm, sensory-rich, ratio 1:3.</p>
+            </div>
+            <div class="card" style="padding:22px;">
+              <div class="card-icon"><i class="fa-solid fa-child"></i></div>
+              <h3 style="font-size:1rem;">Wobbler Room</h3>
+              <p>12 – 24 months. Active exploration, ratio 1:3.</p>
+            </div>
+            <div class="card" style="padding:22px;">
+              <div class="card-icon"><i class="fa-solid fa-palette"></i></div>
+              <h3 style="font-size:1rem;">Toddler Room</h3>
+              <p>2 – 3 years. Creative play, ratio 1:4.</p>
+            </div>
+            <div class="card" style="padding:22px;">
+              <div class="card-icon">🌿</div>
+              <h3 style="font-size:1rem;">Outdoor Garden</h3>
+              <p>Daily fresh air and nature exploration for all ages.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section section-alt">
+      <div class="label">Learning & Development</div>
+      <h2 class="section-title">How We Support Your Child's Growth</h2>
+      <p class="section-sub">Our nursery curriculum follows the Early Years Foundation Stage (EYFS) framework, adapted
+        for the youngest learners through play, song, sensory activities, and loving interactions.</p>
+      <div class="cards cards-3">
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-eye"></i></div>
+          <h3>Sensory Play</h3>
+          <p>Sand, water, paint, texture boards, and light tables stimulate babies' and toddlers' senses, building
+            neural pathways from the very beginning.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-comments"></i></div>
+          <h3>Language & Communication</h3>
+          <p>Songs, rhymes, stories, and responsive conversations are woven into every part of the day to build early
+            communication and listening skills.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-person-running"></i></div>
+          <h3>Physical Development</h3>
+          <p>Tummy time, soft play, climbing frames, and outdoor activities support gross and fine motor development at
+            every stage.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-heart"></i></div>
+          <h3>Personal & Social Skills</h3>
+          <p>Sharing, turn-taking, and forming bonds with peers and key workers builds emotional resilience and social
+            confidence from day one.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-music"></i></div>
+          <h3>Music & Movement</h3>
+          <p>Daily music sessions with instruments, movement, and singing support rhythm, coordination, listening, and
+            pure joyful expression.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-earth-africa"></i></div>
+          <h3>World Awareness</h3>
+          <p>Books, pictures, and play that celebrate different cultures, languages, and traditions — reflecting the
+            diverse community we serve in Lagos.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section section-dark">
+      <div class="label">Settling In</div>
+      <h2 class="section-title">A Gentle Start for Every Child</h2>
+      <p class="section-sub">We know starting nursery is a big moment — for babies and parents alike. Our settling-in
+        process is gradual and completely led by your child's comfort.</p>
+      <div class="cards cards-3">
+        <div class="card card-dark">
+          <div class="card-icon"><i class="fa-solid fa-house"></i></div>
+          <h3>Home Visits</h3>
+          <p>Before your child starts, their key worker may arrange a home visit so your child meets a familiar face in
+            a familiar place first.</p>
+        </div>
+        <div class="card card-dark">
+          <div class="card-icon"><i class="fa-solid fa-clock"></i></div>
+          <h3>Gradual Sessions</h3>
+          <p>We start with short, parent-present sessions, gradually building to longer stays as your child's confidence
+            and comfort grows.</p>
+        </div>
+        <div class="card card-dark">
+          <div class="card-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+          <h3>Daily Updates</h3>
+          <p>Photos, observations, and daily activity summaries sent to parents throughout the day so you always feel
+            connected to your child's world.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="label">Nursery FAQs</div>
+      <h2 class="section-title">Common Nursery Questions</h2>
+      <div class="accordion" style="max-width:700px;">
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAcc(this)">What should my baby bring each day? <span
+              class="acc-icon">+</span></button>
+          <div class="accordion-body">Babies should bring a labelled bag with spare clothes, nappies, formula (if not
+            breastfed), any comfort items (dummy, blanket), and sunscreen in warmer months. We provide all meals and
+            snacks for children who have started solid foods.</div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAcc(this)">How do you handle nap times? <span
+              class="acc-icon">+</span></button>
+          <div class="accordion-body">We follow each baby's individual sleep routine as closely as possible. Our baby
+            room has dedicated sleep spaces with individual cots and sleep monitors. We always place babies on their
+            backs in line with safe sleep guidelines.</div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAcc(this)">What is a key worker? <span
+              class="acc-icon">+</span></button>
+          <div class="accordion-body">A key worker is a named member of staff who is your child's primary carer in the
+            nursery. They will know your child's routines, preferences, and development milestones better than anyone,
+            and will be your main point of contact for all updates and conversations.</div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAcc(this)">How do you support potty training? <span
+              class="acc-icon">+</span></button>
+          <div class="accordion-body">We work in close partnership with parents on potty training when the time comes.
+            We follow the child's lead and ensure a consistent approach between home and nursery. Our toddler room staff
+            are experienced in supporting this milestone with patience and encouragement.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-strip">
+      <h2 style="color: black;">We'd love to welcome your little one.</h2>
+      <a href="#" onclick="showPage('enrol')" style="background: yellow;">Book a Nursery Visit <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- PRIMARY PAGE -->
+  <!-- ══════════════════════════════════════════ -->
+  <div class="page" id="page-primary">
+    <div class="hero-banner" style="background:linear-gradient(135deg,#1a2e1f,#52796f)">
+      <div class="hero-content">
+        <span class="hero-eyebrow">Ages 5 – 11 Years</span>
+        <h1>Primary School — Building Tomorrow's Leaders</h1>
+        <p>An inspiring, rigorous, and joyful primary education that equips children with the knowledge, skills, and
+          character to thrive in the world.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="two-col">
+        <img src="img/classroom5.jpg"
+          alt="Primary school children">
+        <div class="two-col-text">
+          <div class="label">Our Primary School</div>
+          <h2 class="section-title">Education with Purpose & Heart</h2>
+          <p style="color:var(--mid);line-height:1.8;margin-bottom:18px;">Our primary school provides a world-class
+            education for children aged 5 to 11. We combine a strong academic curriculum with an equally strong focus on
+            character, values, creativity, and community — because we believe education is about the whole child, not
+            just test scores.</p>
+          <p style="color:var(--mid);line-height:1.8;margin-bottom:24px;">Our small class sizes ensure every child
+            receives personalised attention. Our passionate, qualified teachers inspire a genuine love of learning that
+            lasts a lifetime.</p>
+          <div style="background:var(--green-pale);border-radius:12px;padding:20px 24px;">
+            <p style="font-weight:700;color:var(--dark);margin-bottom:12px;">Year Groups</p>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;">
+              <span class="badge badge-green">Year 1 (Age 5–6)</span>
+              <span class="badge badge-green">Year 2 (Age 6–7)</span>
+              <span class="badge badge-green">Year 3 (Age 7–8)</span>
+              <span class="badge badge-green">Year 4 (Age 8–9)</span>
+              <span class="badge badge-green">Year 5 (Age 9–10)</span>
+              <span class="badge badge-green">Year 6 (Age 10–11)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section section-alt">
+      <div class="label">The Curriculum</div>
+      <h2 class="section-title">What Your Child Will Learn</h2>
+      <p class="section-sub">Our curriculum is broad, balanced, and ambitious — designed to challenge every child while
+        celebrating the unique strengths each one brings to the classroom.</p>
+      <div class="cards cards-3">
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+          <h3>Mathematics</h3>
+          <p>From number bonds to fractions and algebra — our maths curriculum builds deep understanding, mental
+            agility, and confident problem-solving.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-pen-to-square"></i></div>
+          <h3>English & Literacy</h3>
+          <p>Reading, writing, grammar, public speaking, and debate — we build articulate, confident communicators who
+            love language in all its forms.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-flask"></i></div>
+          <h3>Science</h3>
+          <p>Hands-on experiments, observations, and inquiry-based learning that builds scientific thinking and
+            curiosity about the natural world.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-laptop"></i></div>
+          <h3>Technology & Computing</h3>
+          <p>Coding, digital literacy, responsible internet use, and creative technology projects that prepare children
+            for a digital future.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-masks-theater"></i></div>
+          <h3>Arts & Culture</h3>
+          <p>Visual art, drama, music, and dance nurture creativity, self-expression, and appreciation of Nigeria's rich
+            cultural heritage and beyond.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-globe"></i></div>
+          <h3>Social Studies & Values</h3>
+          <p>Civic responsibility, history, geography, and ethics — growing children who are informed, empathetic, and
+            proud of their identity.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="two-col reverse">
+        <img src="img/hall.jpg" alt="Children studying">
+        <div class="two-col-text">
+          <div class="label">Beyond the Classroom</div>
+          <h2 class="section-title">Enrichment, Sport & Character</h2>
+          <p style="color:var(--mid);line-height:1.8;margin-bottom:18px;">At Gracias Semilla Primary, we firmly believe
+            that education happens both inside and outside the classroom. Our enrichment programme ensures every child
+            discovers and develops talents that go beyond the academic.</p>
+          <div class="cards cards-2" style="margin-top:8px;">
+            <div class="card" style="padding:22px;">
+              <div class="card-icon"><i class="fa-solid fa-futbol"></i></div>
+              <h3 style="font-size:1rem;">Sports</h3>
+              <p>Football, athletics, swimming, and team sports building fitness, teamwork, and resilience.</p>
+            </div>
+            <div class="card" style="padding:22px;">
+              <div class="card-icon"><i class="fa-solid fa-palette"></i></div>
+              <h3 style="font-size:1rem;">Art Club</h3>
+              <p>After-school studio sessions exploring painting, sculpture, and mixed media.</p>
+            </div>
+            <div class="card" style="padding:22px;">
+              <div class="card-icon"><i class="fa-solid fa-book"></i></div>
+              <h3 style="font-size:1rem;">Book Club</h3>
+              <p>Weekly reading group fostering a love of literature across all genres.</p>
+            </div>
+            <div class="card" style="padding:22px;">
+              <div class="card-icon"><i class="fa-solid fa-microphone"></i></div>
+              <h3 style="font-size:1rem;">Debate & Drama</h3>
+              <p>Confidence, public speaking, and critical thinking through debate and performance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section section-dark">
+      <div class="label">Assessment & Progress</div>
+      <h2 class="section-title">Tracking Your Child's Journey</h2>
+      <p class="section-sub">We maintain open, ongoing communication with parents about their child's academic progress,
+        social development, and wellbeing.</p>
+      <div class="cards cards-3">
+        <div class="card card-dark">
+          <div class="card-icon"><i class="fa-solid fa-chart-bar"></i></div>
+          <h3>Termly Reports</h3>
+          <p>Detailed written reports at the end of each term covering academic achievement, effort, behaviour, and
+            teacher observations for every subject.</p>
+        </div>
+        <div class="card card-dark">
+          <div class="card-icon"><i class="fa-solid fa-handshake"></i></div>
+          <h3>Parent–Teacher Meetings</h3>
+          <p>Scheduled each term, with the option of additional meetings whenever parents have questions or concerns
+            about their child's progress.</p>
+        </div>
+        <div class="card card-dark">
+          <div class="card-icon"><i class="fa-solid fa-trophy"></i></div>
+          <h3>Awards & Celebrations</h3>
+          <p>Regular assemblies, star-of-the-week certificates, and end-of-year celebrations that recognise academic and
+            personal achievements alike.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="label">Primary School FAQs</div>
+      <h2 class="section-title">Questions About Our Primary School</h2>
+      <div class="accordion" style="max-width:700px;">
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAcc(this)">What age does Primary School start? <span
+              class="acc-icon">+</span></button>
+          <div class="accordion-body">Children join our primary school from age 5, entering Year 1. We have a smooth
+            transition pathway for children who have been in our nursery or pre-school, and we also welcome new pupils
+            from other settings through our standard admissions process.</div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAcc(this)">What is the school uniform? <span
+              class="acc-icon">+</span></button>
+          <div class="accordion-body">We have a smart, comfortable school uniform in our school colours of green and
+            white. Details of the full uniform list, approved suppliers, and PE kit requirements are provided in our
+            Parent Pack, which is shared upon enrolment.</div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAcc(this)">Do you set homework? <span
+              class="acc-icon">+</span></button>
+          <div class="accordion-body">Yes — homework is set weekly in line with the child's year group. For younger
+            children (Years 1–2) this is primarily reading and phonics. From Year 3 upwards, homework includes maths
+            practice, writing tasks, and research projects. We keep it manageable and purposeful.</div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAcc(this)">How do you support children transitioning to
+            secondary school? <span class="acc-icon">+</span></button>
+          <div class="accordion-body">Our Year 6 programme includes secondary school preparation, entrance exam support,
+            study skills workshops, and visits to secondary schools. Our pastoral team works closely with each child and
+            their family throughout this important transition.</div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAcc(this)">Do you offer support for gifted or advanced
+            learners? <span class="acc-icon">+</span></button>
+          <div class="accordion-body">Absolutely. Our teachers differentiate lessons so every child is appropriately
+            challenged. We run extension programmes, subject masterclasses, and competitions for children who are ready
+            to go further and deeper in any subject.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-strip">
+      <h2 style="color: black;">Give your child a primary education they'll remember forever.</h2>
+      <a href="#" onclick="showPage('enrol')" style="background: yellow;">Apply for a Place <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+
+  <!-- FOOTER (shared) -->
+<!-- ════════════════════ CONTACT ════════════════════ -->
   <section class="contact-section" id="contact">
     <div class="contact-inner">
       <div class="contact-header rv">
@@ -611,15 +1539,13 @@
         <!-- Quick links -->
         <div>
           <h5>Quick Links</h5>
-          <a href="#">About</a>
-          <a href="#">Pre-School</a>
-          <a href="#">Daycare</a>
-          <a href="#">Enrol</a>
-          <a href="#">Funding</a>
-          <a href="#">Meals</a>
-          <a href="#">Summer Club</a>
-          <a href="#">Virtual Tour</a>
-          <a href="#">Blogs</a>
+          <a href="#" onclick="showPage('home')">Home</a>
+          <a href="#" onclick="showPage('about')">About Us</a>
+        <a href="#" onclick="showPage('preschool')">Pre-School</a>
+        <a href="#" onclick="showPage('daycare')">Daycare</a>
+        <a href="#" onclick="showPage('nursery')">Nursery</a>
+        <a href="#" onclick="showPage('primary')">Primary</a>
+        <a href="#" onclick="showPage('enrol')">Enroll</a>
         </div>
 
         <!-- Newsletter -->
@@ -681,6 +1607,34 @@
         btn.classList.add("active");
       });
     });
+  </script>
+
+
+  <script>
+    // Generate hero dots
+    const d = document.getElementById('hero-dots-js');
+    if (d) { let s = ''; for (let i = 0; i < 42; i++) s += '<span></span>'; d.innerHTML = s; Object.assign(d.style, { position: 'absolute', right: '60px', top: '50%', transform: 'translateY(-50%)', display: 'grid', gridTemplateColumns: 'repeat(6,1fr)', gap: '8px', opacity: '.25' }); d.querySelectorAll('span').forEach(s => Object.assign(s.style, { width: '6px', height: '6px', borderRadius: '50%', background: '#e9c46a', display: 'block' })); }
+
+    function showPage(id) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+      const page = document.getElementById('page-' + id);
+      if (page) { page.classList.add('active'); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+      const navLink = document.getElementById('nav-' + id);
+      if (navLink) navLink.classList.add('active');
+
+      const mobMenu = document.getElementById("mob-menu");
+      mobMenu.classList.toggle("open", false);
+
+      return false;
+    }
+
+    function toggleAcc(btn) {
+      const body = btn.nextElementSibling;
+      const isOpen = btn.classList.contains('open');
+      btn.closest('.accordion').querySelectorAll('.accordion-header').forEach(b => { b.classList.remove('open'); b.nextElementSibling.classList.remove('open'); });
+      if (!isOpen) { btn.classList.add('open'); body.classList.add('open'); }
+    }
   </script>
 </body>
 
